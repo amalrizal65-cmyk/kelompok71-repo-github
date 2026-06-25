@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelompok 7 | Portofolio</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(15,23,42,.8),
+rgba(15,23,42,.8)),
+url('foto_kelompok.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+color:#cbd5e1;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#3b82f6;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* SECTION ANGGOTA */
+
+.anggota{
+padding:100px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.card{
+width:280px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+cursor:pointer;
+transition:.4s;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(59,130,246,.3);
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#94a3b8;
+}
+
+/* PROFIL */
+
+.profile{
+display:none;
+margin-top:60px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+animation:fade .5s ease;
+}
+
+.profile img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #3b82f6;
+margin-bottom:20px;
+}
+
+.profile h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.profile p{
+margin:10px 0;
+color:#e2e8f0;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+footer{
+padding:30px;
+text-align:center;
+color:#94a3b8;
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+</style></head><body><section class="hero"><div class="hero-content"><h1>Kelompok 7</h1><p>
+Website Portofolio Anggota Kelompok
+Mahasiswa ITBM Polman
+</p><a href="#anggota" class="btn">
+Hubungi Kami
+</a></div></section><section id="anggota" class="anggota"><div class="section-title">
+<h2>Anggota Kelompok</h2>
+</div><div class="cards"><div class="card" onclick="showProfile(0)">
+<h3>Ahmad Ishak</h3>
+<p>Klik untuk melihat profil lengkap</p>
+</div><div class="card" onclick="showProfile(1)">
+<h3>Muhammad Fajar</h3>
+<p>Klik untuk melihat profil lengkap</p>
+</div><div class="card" onclick="showProfile(2)">
+<h3>Nur Aisyah</h3>
+<p>Klik untuk melihat profil lengkap</p>
+</div></div><div id="profile" class="profile"><img id="foto" src="foto1.jpg"><h2 id="nama"></h2><p id="nim"></p><p id="prodi"></p><p id="alamat"></p><p id="email"></p></div></section><footer>
+© 2026 Kelompok 7 | ITBM Polman
+</footer><script>
+
+const anggota=[
+
+{
+nama:"Ahmad Ishak",
+nim:"2300001",
+prodi:"Sistem Informasi",
+alamat:"Polewali Mandar",
+email:"ahmad@gmail.com",
+foto:"foto1.jpg"
+},
+
+{
+nama:"Muhammad Fajar",
+nim:"2300002",
+prodi:"Sistem Informasi",
+alamat:"Majene",
+email:"fajar@gmail.com",
+foto:"foto2.jpg"
+},
+
+{
+nama:"Nur Aisyah",
+nim:"2300003",
+prodi:"Sistem Informasi",
+alamat:"Mamuju",
+email:"aisyah@gmail.com",
+foto:"foto3.jpg"
+}
+
+];
+
+function showProfile(i){
+
+document.getElementById("profile").style.display="bloc…
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil Ahmad Ishak</title><style>
+
+body{
+font-family:Poppins,sans-serif;
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.card{
+background:#1e293b;
+padding:40px;
+border-radius:20px;
+text-align:center;
+width:500px;
+}
+
+img{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+border:4px solid #3b82f6;
+}
+
+a{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:#3b82f6;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+</style></head><body><div class="card"><img src="foto1.jpg"><h1>Ahmad Ishak</h1><p><b>NIM:</b> 2300001</p><p><b>Program Studi:</b> Sistem Informasi</p><p><b>Alamat:</b> Polewali Mandar</p><p><b>Email:</b> ahmad@gmail.com</p><p>
+Mahasiswa ITBM Polman yang memiliki minat
+di bidang teknologi informasi dan pengembangan web.
+</p><a href="index.html">
+Kembali ke Halaman Utama
+</a></div></body>
+</html>
